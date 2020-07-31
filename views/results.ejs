@@ -6,14 +6,13 @@
 <body>
         <main>
             <h1> Cool Images</h1>
-            <form action ="/search">
-            <input type="text" placeholder="Type Keyword" name ="keyword"/>
-            <br><br>
-            <button>Search</button>
-       
-
-        </form>
+                <form action="/search">
+                <input type="text" placeholder="Type keyword" name="keyword"/>
+                <br><br>
+                <button>Search</button>
+                <br><a id="favLink" href="/getKeywords"> See Favorites </a>
         <hr>
+        <div id="resultsContainer">
         <% imageUrlArray.forEach(function(imageUrl, i) { %>
         <%- (i % 3 == 0)?'<br>':'' %>
         <img src='<%= imageUrl %>' width='200' height='200'/>
@@ -21,7 +20,7 @@
         
         <% });%>
         </main>
-        
+        </div>
         
         <%- include('partials/footer.ejs') %>
 
