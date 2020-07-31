@@ -35,7 +35,7 @@ function updateFavorite(action, imageUrl, keyword) {
         success: function(data, status) {
             
         }
-    });
+    });//ajax
 }
 
 });
